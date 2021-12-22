@@ -8,6 +8,7 @@ jobs:
       - uses: actions/setup-go@v2
         with: 
           go-version: 1.17.5
+      - run: go env -w GO111MODULE=auto
       - run: cd ci
       - run: go test
       - run: go run math.go
